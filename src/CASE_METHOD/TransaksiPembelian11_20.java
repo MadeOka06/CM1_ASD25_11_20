@@ -3,6 +3,11 @@ package CASE_METHOD;
 import java.util.Scanner;
 
 public class TransaksiPembelian11_20 {
+    String kodeTransaksi;
+    String namaPembelian;
+    String tanggalPembelian;
+    int qty;
+    String barang;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Barang11_20[] barang = {
@@ -36,10 +41,16 @@ public class TransaksiPembelian11_20 {
 
             } else if (menu == 6) {
                 break;
-            }
-
+            }    
         }
-
+        
+    }
+    TransaksiPembelian11_20 (String kodeTransaksi,  String namaPembelian ,String tanggalPembelian , int qty, String brg){
+        this.kodeTransaksi = kodeTransaksi;
+        this.namaPembelian = namaPembelian;
+        this.tanggalPembelian = tanggalPembelian;
+        this.qty = qty;
+        barang = brg;
     }
 
 }
