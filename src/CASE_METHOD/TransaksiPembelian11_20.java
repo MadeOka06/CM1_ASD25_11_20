@@ -1,26 +1,28 @@
 package CASE_METHOD;
-
-import java.util.Scanner;
-
 public class TransaksiPembelian11_20 {
+    Barang11_20[] barang;
     String kodeTransaksi;
     String namaPembelian;
     String tanggalPembelian;
+    String brg;
     int qty;
-    Barang11_20[] barang;
+    int hrg;
 
-    TransaksiPembelian11_20(String kodeTransaksi, String namaPembelian, String tanggalPembelian, int qty, String brg) {
+    TransaksiPembelian11_20(){
+
+    }
+    TransaksiPembelian11_20(String kodeTransaksi, String namaPembelian, String tanggalPembelian, String barang, int qty, int harga) {
         this.kodeTransaksi = kodeTransaksi;
         this.namaPembelian = namaPembelian;
         this.tanggalPembelian = tanggalPembelian;
         this.qty = qty;
-        String barang = brg;
+        brg = barang;
+        hrg = harga;
     }
-
     void tampilDataTransaksi() {
-        for (Barang11_20 m : barang) {
-            m.tampilDataBarang();
-        }
-    }
+        System.out.println("===============================================================================================");
+        System.out.println("| Kode Transaksi | Nama Pembeli     | Tanggal Pembelian    | Nama Barang   | Kuantitas | Harga | ");
+        System.out.println("===============================================================================================");
 
+    }
 }
