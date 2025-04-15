@@ -8,6 +8,7 @@ public class MainSistem {
     public static void main(String[] args) {
         Barang11_20 list = new Barang11_20();
         TransaksiPembelian11_20 tr = new TransaksiPembelian11_20();
+        SercviceClass11_20 src = new SercviceClass11_20();
         Scanner sc = new Scanner(System.in);
         Barang11_20[] barang = {
                 new Barang11_20("Br001", "Leo Kripik", "Makanan", 10, 1000),
@@ -16,12 +17,12 @@ public class MainSistem {
                 new Barang11_20("Br004", "Rinso Cair", "Makanan", 10, 7000),
                 new Barang11_20("Br005", "Mama Lemon Cair", "Makanan", 10, 1000),
         };
-        TransaksiPembelian11_20 [] Transaksi = {
-            new TransaksiPembelian11_20("Tr001", "Santi", "21-04-2024", "Leo Kripik", 1, 1000),
-            new TransaksiPembelian11_20("Tr002", "Vani", "21-04-2024", "You C1000 Botol", 2, 7000),
-            new TransaksiPembelian11_20("Tr003", "Siska", "21-04-2024", "Teh Pucuk Botol", 3, 4000),
-            new TransaksiPembelian11_20("Tr004", "MeiMei", "21-04-2024", "Teh Pucuk Botol", 1, 4000),
-            new TransaksiPembelian11_20("Tr005", "Ihsan", "21-04-2024", "You C1000 Botol", 1, 7000),
+        TransaksiPembelian11_20[] Transaksi = {
+                new TransaksiPembelian11_20("Tr001", "Santi", "21-04-2024", "Leo Kripik", 1, 1000),
+                new TransaksiPembelian11_20("Tr002", "Vani", "21-04-2024", "You C1000 Botol", 2, 7000),
+                new TransaksiPembelian11_20("Tr003", "Siska", "21-04-2024", "Teh Pucuk Botol", 3, 4000),
+                new TransaksiPembelian11_20("Tr004", "MeiMei", "21-04-2024", "Teh Pucuk Botol", 1, 4000),
+                new TransaksiPembelian11_20("Tr005", "Ihsan", "21-04-2024", "You C1000 Botol", 1, 7000),
         };
         while (true) {
             System.out.println("============== TOKO Manasuka =============");
@@ -45,10 +46,11 @@ public class MainSistem {
             } else if (menu == 2) {
                 tr.tampilDataTransaksi();
                 for (TransaksiPembelian11_20 r : Transaksi) {
-                    System.out.printf("| %-14s | %-16s | %-20s |%-15s| %-9d | %-5d |\n", r.kodeTransaksi, r.namaPembelian, r.tanggalPembelian, r.brg, r.qty,r.hrg);
+                    System.out.printf("| %-14s | %-16s | %-20s |%-15s| %-9d | %-5d |\n", r.kodeTransaksi,
+                            r.namaPembelian, r.tanggalPembelian, r.brg, r.qty, r.hrg);
                 }
             } else if (menu == 3) {
-
+                src.tambahDataTransaksi(Transaksi);
             } else if (menu == 4) {
 
             } else if (menu == 5) {
